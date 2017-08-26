@@ -104,6 +104,12 @@ if __name__ == "__main__":
     if args[0] in ['help','-help','--help']:
         print "usage:"
         print "python + feature_extract.py + img_dir + data_dir + foldname + layername"
+        print "img_dir is the foldname for your images,such as /home/zhuyaochen/dataset/"
+        print "data_dir is the filename for your image-label pair,such as 0/cat1.jpg 1"
+        print "notice that img_dir+data_dir is the absolute path for your image such as \
+              /home/zhuyaochen/dataset/0/cat1.jpg"
+        print "foldname is the fold that you want to save your feature file"
+        print "layername is the layer you want to extract feature from.such as fc7"
     else:
         if len(args) < 4:
             raise Exception('lack of paramete!')
