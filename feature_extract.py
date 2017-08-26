@@ -3,14 +3,11 @@ import sys
 import caffe
 import numpy as np 
 
-caffe_root='/home/zhuyaochen/caffe/'
-deploy=caffe_root+'examples/DImage/deploy.prototxt'
-caffe_model=caffe_root + 'examples/DImage/caffenet_train_iter_1000.caffemodel'  
-mean_file = caffe_root + 'examples/DImage/DImage_mean.binaryprot.npy'
-synset_file = caffe_root + 'examples/DImage/synset_words.txt'
-
-#img_dir = '/mnt/usb/DamageImage/'
-#data_name = '/mnt/usb/data/train.txt'
+caffe_root='/home/zhuyaochen/caffe/' #CHANGE IT TO THE ROOT OF YOUR CAFFE
+deploy=caffe_root+'examples/DImage/deploy.prototxt' #CHANGE IT TO THE PATH OF YOUR PROTOTXT FILE
+caffe_model=caffe_root + 'examples/DImage/caffenet_train_iter_1000.caffemodel'  #CHANGE IT TO THE PATH OF YOUR CAFFE MODEL
+mean_file = caffe_root + 'examples/DImage/DImage_mean.binaryprot.npy' #CHANGE IT TO THE BINARYFILE 
+synset_file = caffe_root + 'examples/DImage/synset_words.txt'#CHANGED IT TO THE PATH OF YOUR IMAGE-LABEL PAIR
 
 def read_image(img_dir,data_name,abs = False):
     ###
